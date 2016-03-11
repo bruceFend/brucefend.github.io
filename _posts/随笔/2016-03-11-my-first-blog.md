@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hello World
-category: Life
+category: Life1
 tags: 锋言锋语
 keywords: 
 description: 
