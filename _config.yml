@@ -9,8 +9,8 @@ author:
   link: http://wushifengzi.xyz
   weibo: http://weibo.com/brucefend
   github: http://github.com/brucefend
-  music: http://site.douban.com/linanya
-  linkedin: https://www.linkedin.com/pub/anya-lin/81/91/232
+ # music: http://site.douban.com/linanya
+ # linkedin: https://www.linkedin.com/pub/anya-lin/81/91/232
 
 # 站点信息
 title: 锋子的房
@@ -19,8 +19,8 @@ url: http://wushifengzi.xyz
 rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon
-gavatar: /public/img/deer3.png
-favicon: /public/img/deer3.png
+gavatar: /public/img/portrait.png
+favicon: /public/img/portrait.png
 
 # google analytics 设置
 ga:
