@@ -1,6 +1,6 @@
 permalink: /:year/:month/:day/:title.html
 paginate: 10
-markdown: redcarpet
+markdown: kramdown
 
 # 作者信息
 author: 
@@ -9,7 +9,7 @@ author:
   link: http://wushifengzi.xyz
   weibo: http://weibo.com/brucefend
   github: http://github.com/brucefend
- # music: http://site.douban.com/linanya
+  douban: https://www.douban.com/people/93893839/
  # linkedin: https://www.linkedin.com/pub/anya-lin/81/91/232
 
 # 站点信息
