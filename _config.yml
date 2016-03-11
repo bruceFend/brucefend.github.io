@@ -19,8 +19,8 @@ url: http://wushifengzi.xyz
 rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon
-gavatar: /public/img/portrait.png
-favicon: /public/img/portrait.png
+gavatar: /public/img/portrait.jpg
+favicon: /public/img/portrait.jpg
 
 # google analytics 设置
 ga:
