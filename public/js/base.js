@@ -90,7 +90,7 @@ function contentEffects(){
     $("pre").addClass("prettyprint");
     prettyPrint(); 
     $('#content img').addClass('img-thumbnail').parent('p').addClass('center');
-   // $('#content_btn').show(); 不显示文章的章节按钮
+    $('#content_btn').show(); //不显示文章的章节按钮
   }else{
     $('#content_btn').hide();
   }
