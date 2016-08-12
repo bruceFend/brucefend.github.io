@@ -1,3 +1,12 @@
+---
+layout: post
+title: Java Turorials 学习
+category: 技术
+tags: Java
+keywords: Java
+description: 
+---
+
 开始静下心来看Java的官方指导文档，然后是Android。
 
 ## 1、About the Java Technology
