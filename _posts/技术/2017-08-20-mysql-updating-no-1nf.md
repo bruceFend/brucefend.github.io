@@ -1,3 +1,13 @@
+---
+layout: post
+title: 不满足第一范式的MySQL数据库更新操作-备忘
+category: 技术
+tags: MySQL
+keywords: MySQL
+description: 
+---
+
+
 #### 首先简单回顾下数据库的三大范式
 
 [数据库设计三大范式](http://www.cnblogs.com/linjiqin/archive/2012/04/01/2428695.html)
