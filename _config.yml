@@ -1,4 +1,3 @@
-
 # Amount of newest post to show on home page
 paginate: 8
 paginate_path: "/page:num"
@@ -46,8 +45,8 @@ active: 读书
 
 # 首页除了最新文章外显示分类
 cates: 
-  - 随笔
   - 技术
+  - 随笔
 
 # 中文本地化
 locals:
@@ -56,4 +55,3 @@ locals:
   newest: 最新文章
   archive: 归档
 
-theme: jekyll-theme-architect
