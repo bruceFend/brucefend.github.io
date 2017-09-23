@@ -1,13 +1,22 @@
+
+# Amount of newest post to show on home page
+paginate: 8
+paginate_path: "/page:num"
 permalink: /:year/:month/:day/:title.html
-paginate: 10
 markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: true
+# Fixing highlighting errors: pygments not supported.
+highlighter: rouge
+
 
 # 作者信息
 author: 
   name: 吾是锋子
   email: bruce.fend@gmail.com
   link: http://wushifengzi.xyz
-  weibo: http://weibo.com/brucefend
+ # weibo: 
   github: http://github.com/brucefend
   douban: https://www.douban.com/people/93893839/
  # linkedin: https://www.linkedin.com/pub/anya-lin/81/91/232
@@ -17,6 +26,7 @@ title: 锋子的房
 description: My personal blog
 url: http://wushifengzi.xyz
 rss_url: /pages/atom.xml
+production_url:     http://wushifengzi.xyz           # production_url是sitemap生成的url,方便百度谷歌收录.
 
 # gavatar头像及Favicon
 gavatar: /public/img/portrait.png
@@ -36,8 +46,8 @@ active: 读书
 
 # 首页除了最新文章外显示分类
 cates: 
-  - Optimization
-  - LaTeX
+  - 随笔
+  - 技术
 
 # 中文本地化
 locals:
