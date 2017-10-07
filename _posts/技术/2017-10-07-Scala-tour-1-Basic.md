@@ -2,7 +2,7 @@
 layout: post
 title: Scala官方tour备忘-1
 category: 技术
-tags: Scala,tour
+tags: Scala tour
 keywords: Scala
 description: 
 ---
@@ -27,7 +27,7 @@ x = 3   // This compiles because "x" is declared with the "var" keyword.
 println(x*x)    //9
 ```
 
-#### Blocks
+#### <font color='#DC322F'>Blocks
 ```
 println({
     val x = 1+1
@@ -35,7 +35,7 @@ println({
 )}  //3
 ```
 
-#### Functions
+#### <font color='#DC322F'>Functions
 ```
 val addOne = (x:Int) => x+1
 println(addOne(1))  //2
@@ -50,7 +50,7 @@ val getTheAnswer=() => 42
 println(getTheAnswer()) //42
 ```
 
-#### Methods
+#### <font color='#DC322F'>Methods
 
 > //method的定义用def的关键字，function不用 
 >
@@ -67,7 +67,7 @@ def addThenMultiply(x:Int, y:Int)(multiplier:Int):Int = {
 println(addThenMultiply(1,2)(3))    //9
 ```
 
-#### Classes
+#### <font color='#DC322F'>Classes
 
 //返回值类型是Unit，Unit是什么类型？【见第二部分】
 
@@ -84,7 +84,7 @@ val greeter = new Greeter("hello, ", "!")
 greeter.greet("Scala developer")    //hello, Scala developer!
 ```
 
-#### Case Classes [importance]
+#### <font color='#DC322F'>Case Classes [importance]
 
 > Scala has a special type of class called a “case” class. By default, case classes are immutable and compared by value. You can define case classes with the `case class` keywords.
 >
@@ -92,7 +92,7 @@ greeter.greet("Scala developer")    //hello, Scala developer!
 
 这里看tour的内容，不是很理解
 
-#### Objects [importance]
+#### <font color='#DC322F'>Objects [importance]
 
 //可以把Object当做是对应类的单例
 > Objects are single instances of their own definitions. You can think of them as singletons of their own classes.
@@ -112,7 +112,7 @@ val newerId = IdFactory.create()
 println(newerId)    //2
 ```
 
-#### Traits [importance]
+#### <font color='#DC322F'>Traits [importance]
 
 //带方法体的接口？
 > Traits are types containing certain fields and methods. Multiple traits can be combined.
@@ -139,7 +139,7 @@ val customGreeter = new CustomizableGreeter("How are you,", "?")
 customGreeter.greet("Scala developer")  //How are you, Scala developer?
 ```
 
-#### Main Method
+#### <font color='#DC322F'>Main Method
 
 > The main method is an entry point of a program. The Java Virtual Machine requires a main method to be named `main` and take one argument, an array of strings.
 
