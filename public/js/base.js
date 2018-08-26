@@ -62,7 +62,7 @@ $(document).ready(function() {
   $(document).on("pjax:end", function() {
     /* 默认不显示左侧菜单栏 */
    /* if($("body").find('.container').width() < 992)  */
-    if(!is_nav_show)
+    if(!site.is_nav_show)
       $('#nav_btn').click();
     $('.aside3').scrollTop(0);
     contentEffects();
