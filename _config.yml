@@ -26,6 +26,7 @@ description: My personal blog
 url: http://wushifengzi.xyz
 rss_url: /pages/atom.xml
 production_url:     http://wushifengzi.xyz           # production_url是sitemap生成的url,方便百度谷歌收录.
+is_nav_show: false  #自己加的属性
 
 # gavatar头像及Favicon
 gavatar: /public/img/portrait.png
@@ -41,7 +42,7 @@ disqus:
   shortname: wushifengzixyz
 
 # 主题设置，自动激活某个标签
-active: 读书
+active: 技术
 
 # 首页除了最新文章外显示分类
 cates: 
@@ -52,6 +53,6 @@ cates:
 locals:
   tags: 标签
   about: 关于
-  newest: 最新文章
+  newest: 最近
   archive: 归档
 
