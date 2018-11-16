@@ -23,7 +23,7 @@ description: 进入数据组后的第一个项目
 1. 从`MySQL`中读取`rowKey`信息
 2. 在`HBase`中scan数据出来
 3. 结构化
-4. 用`dataFrameToMySQL`将结果写`入MySQL`中
+4. 用`dataFrameToMySQL`将结果写入`MySQL`中
  
 **读MySQL**[(squeryl)](http://squeryl.org/inserts-updates-delete.html)
 ```scala
@@ -75,8 +75,8 @@ def DFToMySQL(df:DataFrame) = {
 ```
 
 问题：
-1. dataframe的join完select会出现列名重复的情况，需要drop掉或者withColumnRename
-2. dataframe中列的顺序需要跟MySQL表一致，[详情](https://www.tuicool.com/articles/qAzYza)
+1. `dataframe`的`join`完`select`会出现列名重复的情况，需要`drop`掉或者`withColumnRename`
+2. `dataframe`中列的顺序需要跟MySQL表一致，[详情](https://www.tuicool.com/articles/qAzYza)
 
 学习了：
 1. dataFrame和rdd的基本操作(map/filter/na.fill/)
@@ -93,7 +93,7 @@ def DFToMySQL(df:DataFrame) = {
 比较麻烦的地方是，业务人员希望每次是抽查的概念，即每次查询都得到不一样的结果集。所以我在这里的思路是：
 1. 得到当前筛选条件下大表的总数N
 2. 取一个(0,N-M)范围的随机数r
-3. select大表时，limit(r,M)
+3. `select`大表时，`limit(r,M)`
  
 ```scala
 var totalPage:int = 1
@@ -110,15 +110,15 @@ var endIndex = queryResult.size() - startIndex > 20 ? 20+startIndex : queryResul
 
 问题：
 1. 查询速度慢(当r很大的时候) 可以考虑用[子查询](http://www.cnblogs.com/zhangzhu/p/3380542.html)的方法，但大表的主键不是顺序主键。
-或者用MySQL自己的random()方法。[方法一](http://www.cnblogs.com/phper7/archive/2010/05/26/1744063.html) 
+或者用`MySQL`自己的`random()`方法。[方法一](http://www.cnblogs.com/phper7/archive/2010/05/26/1744063.html) 
 [方法二](https://stackoverflow.com/questions/1823306/mysql-alternatives-to-order-by-rand#)
 2. limit从第r条开始可能取不到M条满足条件的结果
 3. 因为是将M条记录全部取出放入内存，当M太大时，会占用大量内存
 
 
 学习了：
-1. 自己写了分页逻辑（将每次查询的结果缓存在list中，然后用list.subList(fromIndex,toIndex)的方式返回指定页码的结果）
-2. 前端用的是thymeleaf框架，不太习惯（写js的时候，有符号就算转义了也不能用）
+1. 自己写了分页逻辑（将每次查询的结果缓存在`list`中，然后用`list.subList(fromIndex,toIndex)`的方式返回指定页码的结果）
+2. 前端用的是`thymeleaf`框架，不太习惯（写js的时候，有符号就算转义了也不能用）
 
 #### Part3 Send to FTP
 
@@ -160,5 +160,5 @@ public static boolean uploadFileToFTP(FTPConf conf, String fileName, String path
 
 #### TODO
 
-1. 优化spark部分代码，提高处理效率
+1. 优化`spark`部分代码，提高处理效率
 2. 优化查询部分的代码
