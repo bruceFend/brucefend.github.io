@@ -160,18 +160,15 @@ public static synchronized KafkaProducer getInstance(String brokerList) {
 错误因为`spark-sql`的版本问题，之前是1.5.1，改成1.6.3不行(运行环境就是1.5.1的版本)
 
 3、将处理结果往`kafka`写消息的时候，出现了线程泄露的问题。一开始以为是`kafkaProducer`的创建问题，
-但后面通过注释代码的方式定位到是sqlContext对象的创建问题。之前用的是
-`val sqlContext = new SQLContext(sparkContext)`
-改成下面的写法后问题解决
-`val sqlContext = SQLContext.getOrCreate(sparkContext)`
+但后面通过注释代码的方式定位到是sqlContext对象的创建问题。之前用的是 `val sqlContext = new SQLContext(sparkContext)`
+改成下面的写法后问题解决 `val sqlContext = SQLContext.getOrCreate(sparkContext)`
 【在调试的时候，其实发现了管理的web页面出现了SQL、SQL1、SQL2这些菜单，也就是每处理一批数据都会出现一个新的sqlContext，
 只是当时不知道这里是有问题的】
 
 4、各种序列化问题，`kafkaProducer/sparkContext`
 
 5、没有记录kafka的offset信息，应用重启后，无法从之前断掉的位置开始，导致数据丢失。
-【[方法一](https://blog.csdn.net/high2011/article/details/53706446?winzoom=1)、
-[方法二](https://blog.csdn.net/high2011/article/details/79848882)，实际工程参考了方法一，
+【[方法一](https://blog.csdn.net/high2011/article/details/53706446?winzoom=1)、[方法二](https://blog.csdn.net/high2011/article/details/79848882)，实际工程参考了方法一，
 将`offset`的信息记录在`redis`中，每一批次数据处理完后更新`offset`】
 
 ```scala
