@@ -7,7 +7,7 @@ keywords: Java Collection
 description: 
 ---
 
-![collection](https://github.com/bruceFend/brucefend.github.io/blob/master/public/img/Java-collection.JPG)
+![collection](https://raw.githubusercontent.com/bruceFend/brucefend.github.io/master/public/img/Java-collection.JPG)
 
 ### 线程不安全
 ---
