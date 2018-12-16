@@ -9,6 +9,7 @@ kramdown:
 # Fixing highlighting errors: pygments not supported.
 highlighter: rouge
 
+is_nav_show: false
 
 # 作者信息
 author: 
