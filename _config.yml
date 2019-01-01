@@ -2,7 +2,8 @@
 paginate: 8
 paginate_path: "/page:num"
 permalink: /:year/:month/:day/:title.html
-markdown: kramdown
+markdown: redcarpet
+# markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: true
